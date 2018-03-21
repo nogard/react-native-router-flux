@@ -29,6 +29,7 @@ App=(0,_native.observer)(_class=(_temp2=_class2=function(_React$Component){_inhe
 
 
 
+
 onBackPress=function(){return _navigationStore2.default.pop();},_this.
 
 handleDeepURL=function(e){return _this.parseDeepURL(e.url);},_this.
@@ -62,12 +63,12 @@ _this.props.onDeepLink({url:url,action:actionKey,params:params});
 
 _navigationStore2.default[actionKey](params);
 }
-},_temp),_possibleConstructorReturn(_this,_ret);}_createClass(App,[{key:'componentDidMount',value:function componentDidMount(){var _this2=this;_reactNative.BackHandler.addEventListener('hardwareBackPress',this.props.backAndroidHandler||this.onBackPress);_reactNative.Linking.getInitialURL().then(function(url){return _this2.parseDeepURL(url);});_reactNative.Linking.addEventListener('url',this.handleDeepURL);}},{key:'componentWillUnmount',value:function componentWillUnmount(){_reactNative.BackHandler.removeEventListener('hardwareBackPress',this.props.backAndroidHandler||this.onBackPress);_reactNative.Linking.removeEventListener('url',this.handleDeepURL);}},{key:'render',value:function render()
+},_temp),_possibleConstructorReturn(_this,_ret);}_createClass(App,[{key:'componentDidMount',value:function componentDidMount(){var _this2=this;console.log(this.props.backAndroidHandler);_reactNative.BackHandler.addEventListener('hardwareBackPress',this.props.backAndroidHandler||this.onBackPress);_reactNative.Linking.getInitialURL().then(function(url){return _this2.parseDeepURL(url);});_reactNative.Linking.addEventListener('url',this.handleDeepURL);}},{key:'componentWillUnmount',value:function componentWillUnmount(){_reactNative.BackHandler.removeEventListener('hardwareBackPress',this.props.backAndroidHandler||this.onBackPress);_reactNative.Linking.removeEventListener('url',this.handleDeepURL);}},{key:'render',value:function render()
 
 {
 var AppNavigator=this.props.navigator;
 return(
-_react2.default.createElement(AppNavigator,{navigation:(0,_reactNavigation.addNavigationHelpers)({dispatch:_navigationStore2.default.dispatch,state:_navigationStore2.default.state}),__source:{fileName:_jsxFileName,lineNumber:70}}));
+_react2.default.createElement(AppNavigator,{navigation:(0,_reactNavigation.addNavigationHelpers)({dispatch:_navigationStore2.default.dispatch,state:_navigationStore2.default.state}),__source:{fileName:_jsxFileName,lineNumber:71}}));
 
 }}]);return App;}(_react2.default.Component),_class2.propTypes={navigator:_propTypes2.default.func,backAndroidHandler:_propTypes2.default.func,uriPrefix:_propTypes2.default.string,onDeepLink:_propTypes2.default.func},_temp2))||_class;
 
@@ -86,9 +87,9 @@ if(dispatch&&state){
 
 _navigationStore2.default.setState(state);
 _navigationStore2.default.dispatch=dispatch;
-return _react2.default.createElement(AppNavigator,{navigation:(0,_reactNavigation.addNavigationHelpers)({dispatch:dispatch,state:state}),uriPrefix:uriPrefix,__source:{fileName:_jsxFileName,lineNumber:89}});
+return _react2.default.createElement(AppNavigator,{navigation:(0,_reactNavigation.addNavigationHelpers)({dispatch:dispatch,state:state}),uriPrefix:uriPrefix,__source:{fileName:_jsxFileName,lineNumber:90}});
 }
-return _react2.default.createElement(App,_extends({},props,{onDeepLink:onDeepLink,navigator:AppNavigator,uriPrefix:uriPrefix,__source:{fileName:_jsxFileName,lineNumber:91}}));
+return _react2.default.createElement(App,_extends({},props,{onDeepLink:onDeepLink,navigator:AppNavigator,uriPrefix:uriPrefix,__source:{fileName:_jsxFileName,lineNumber:92}}));
 };
 Router.propTypes={
 createReducer:_propTypes2.default.func,

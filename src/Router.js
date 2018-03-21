@@ -16,6 +16,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
+    console.log(this.props.backAndroidHandler)
     BackHandler.addEventListener('hardwareBackPress', this.props.backAndroidHandler || this.onBackPress);
 
     // If the app was "woken up" by an external route.
